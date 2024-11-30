@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.paint.Color?>
+
+<VBox alignment="CENTER" spacing="20.0" styleClass="auth-container"
+      xmlns="http://javafx.com/javafx/22.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.passwordmanagerfx.LoginController"
+      stylesheets="@../../../styles.css">
+
+    <padding>
+        <Insets top="40.0" right="40.0" bottom="40.0" left="40.0" />
+    </padding>
+
+    <HBox alignment="CENTER" spacing="15">
+        <SVGPath
+                content="M12 2L2 7l10 5 10-5-10-5zm0 12l-10-5 10-5 10 5-10 5z"
+                styleClass="brand-icon"
+                fill="#3498db"
+        />
+        <Label text="SecureVault" styleClass="brand-title"/>
+    </HBox>
+
+    <TabPane fx:id="authTabPane" tabClosingPolicy="UNAVAILABLE" styleClass="custom-tab-pane" prefWidth="400">
+        <Tab text="Login">
+            <VBox alignment="CENTER" spacing="20">
+                <!-- Login Form -->
+                <GridPane hgap="15" vgap="15" alignment="CENTER" styleClass="auth-form">
+                    <padding>
+                        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0" />
+                    </padding>
+
+                    <HBox styleClass="input-container" GridPane.columnSpan="2">
+                        <SVGPath
+                                content="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm0 14c-2.03 0-4.43-.82-6.14-2.88C7.55 15.1 9.64 14 12 14s4.45 1.1 6.14 3.12C16.43 19.18 14.03 20 12 20z"
+                                styleClass="input-icon"/>
+                        <TextField fx:id="EmailField" promptText="Email" styleClass="custom-text-field" />
+                    </HBox>
+
+                    <HBox styleClass="input-container" GridPane.rowIndex="1" GridPane.columnSpan="2">
+                        <SVGPath
+                                content="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+                                styleClass="input-icon"/>
+                        <PasswordField fx:id="passwordField" promptText="Password" styleClass="custom-text-field" />
+                    </HBox>
+
+                    <Button
+                            text="Login"
+                            GridPane.columnSpan="2"
+                            GridPane.rowIndex="2"
+                            onAction="#handleLogin"
+                            styleClass="primary-button"
+                    />
+
+                    <Label
+                            text="Forgot Password?"
+                            styleClass="link-label"
+                            GridPane.columnSpan="2"
+                            GridPane.rowIndex="3"
+
+                    />
+                </GridPane>
+            </VBox>
+        </Tab>
+
+        <Tab text="Sign Up">
+            <VBox alignment="CENTER" spacing="20">
+                <!-- Sign Up Form -->
+                <GridPane hgap="15" vgap="15" alignment="CENTER" styleClass="auth-form">
+                    <padding>
+                        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0" />
+                    </padding>
+
+                    <HBox styleClass="input-container" GridPane.rowIndex="2" GridPane.columnSpan="2">
+                        <SVGPath
+                                content="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm0 14c-2.03 0-4.43-.82-6.14-2.88C7.55 15.1 9.64 14 12 14s4.45 1.1 6.14 3.12C16.43 19.18 14.03 20 12 20z"
+                                styleClass="input-icon"/>
+                        <TextField fx:id="NameFieldSg" promptText="Full Name" styleClass="custom-text-field" />
+                    </HBox>
+                    <HBox styleClass="input-container" GridPane.rowIndex="1" GridPane.columnSpan="2">
+                        <SVGPath
+                                content="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                                styleClass="input-icon"/>
+                        <TextField fx:id="emailField" promptText="Email" styleClass="custom-text-field" />
+                    </HBox>
+
+                    <HBox styleClass="input-container" GridPane.rowIndex="3" GridPane.columnSpan="2">
+                        <SVGPath
+                                content="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+                                styleClass="input-icon"/>
+                        <PasswordField fx:id="signupPasswordField" promptText="Password" styleClass="custom-text-field" />
+                    </HBox>
+
+                    <HBox styleClass="input-container" GridPane.rowIndex="4" GridPane.columnSpan="2">
+                        <SVGPath
+                                content="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+                                styleClass="input-icon"/>
+                        <PasswordField fx:id="confirmPasswordField" promptText="Confirm Password" styleClass="custom-text-field" />
+                    </HBox>
+
+                    <Button
+                            text="Sign Up"
+                            GridPane.columnSpan="2"
+                            GridPane.rowIndex="5"
+                            onAction="#handleSignUp"
+                            styleClass="primary-button"
+                    />
+                </GridPane>
+            </VBox>
+        </Tab>
+    </TabPane>
+
+    <!-- Error Message -->
+    <Label fx:id="errorMessage" styleClass="error-message" />
+</VBox>

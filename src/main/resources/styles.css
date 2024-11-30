@@ -1,0 +1,309 @@
+    /* Modern Flat Design with Soft Colors */
+    /*@font-face {*/
+    /*    font-family: 'Rubik';*/
+    /*    src: url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');*/
+    /*}*/
+
+    .root {
+        -fx-font-family: 'Rubik', 'Segoe UI', sans-serif;
+    }
+
+    /* Header Styling */
+    .header-container {
+        -fx-background-color: #ffffff;
+        -fx-background-radius: 10px;
+        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.2, 0, 2);
+        -fx-padding: 15px;
+        -fx-alignment: center;
+    }
+
+    .welcome-text {
+        -fx-font-size: 34px;
+        -fx-font-weight: bold;
+        -fx-text-fill: #2c3e50;
+    }
+
+    /* Toolbar Styling */
+    .custom-toolbar {
+        -fx-background-color: #ffffff;
+        -fx-background-radius: 5px;
+        -fx-spacing: 10;
+        -fx-padding: 10px 0;
+    }
+
+    .toolbar-btn {
+        -fx-background-color: #3498db;
+        -fx-text-fill: white;
+        -fx-background-radius: 5px;
+        -fx-padding: 10px 15px;
+        -fx-font-weight: bold;
+        -fx-font-size: 18px;
+
+        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0.2, 0, 1);
+    }
+
+    .toolbar-btn:hover {
+        -fx-background-color: #2980b9;
+    }
+
+    .toolbar-btn .graphic {
+        -fx-fill: white;
+    }
+
+    /* Table Styling */
+    .custom-table {
+        -fx-background-color: white;
+        -fx-background-radius: 10px;
+        -fx-alignment: center-left;
+
+        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.2, 0, 2);
+    }
+
+    .custom-table .column-header {
+        -fx-background-color: #3498db;
+        -fx-text-fill: white;
+        -fx-font-weight: bold;
+        -fx-font-size: 16px;
+
+    }
+
+    .custom-table .table-row-cell {
+        -fx-background-color: white;
+        -fx-cell-size: 40px;
+        -fx-font-size: 18px;
+
+    }
+
+    .custom-table .table-row-cell:hover {
+        -fx-background-color: rgba(52, 152, 219, 0.1);
+        -fx-font-size: 18px;
+
+    }
+
+    .custom-table .table-row-cell:selected {
+        -fx-background-color: #58a6e0; /* solid color */
+        -fx-text-fill: white;  /* ensures text is visible */
+    }
+
+    /* Context Menu Styling */
+    .custom-context-menu {
+        -fx-background-color: white;
+        -fx-background-radius: 5px;
+        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0.2, 0, 1);
+    }
+
+    .context-menu-item {
+        -fx-background-color: white;
+        -fx-text-fill: #2c3e50;
+    }
+
+    .context-menu-item:hover {
+        -fx-background-color: #0078d7;
+    }
+
+    /* Add Password Button */
+    .add-btn {
+        -fx-background-color: #0078d7;
+        -fx-text-fill: white;
+        -fx-font-weight: bold;
+        -fx-background-radius: 8px;
+        -fx-padding: 10px 20px;
+        -fx-font-size: 16px;
+        -fx-border-radius: 8;
+        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0.2, 0, 1);
+    }
+
+    .add-btn:hover {
+        -fx-background-color: #005fa3;
+    }
+
+    /* Scrollbar Styling */
+    .scroll-bar {
+        -fx-background-color: transparent;
+    }
+
+    .scroll-bar .thumb {
+        -fx-background-color: #bdc3c7;
+        -fx-background-radius: 5px;
+    }
+    .header-label {
+        -fx-font-size: 24px;
+        -fx-font-weight: bold;
+        -fx-text-fill: #2c3e50;
+    }
+
+    .error-label {
+        -fx-text-fill: red;
+        -fx-font-size: 14px;
+    }
+
+    /* Login Form Specific Styles */
+    .login-container {
+        -fx-background-color: #f4f6f9;
+        -fx-alignment: center;
+    }
+
+    .login-form {
+        -fx-background-color: white;
+        -fx-background-radius: 10px;
+        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.2, 0, 2);
+        -fx-padding: 20px;
+    }
+
+    .login-form .label {
+        -fx-text-fill: #2c3e50;
+        -fx-font-weight: bold;
+    }
+
+    .login-form .text-field,
+    .login-form .password-field {
+        -fx-background-color: #f8f9fa;
+        -fx-background-radius: 5px;
+        -fx-border-color: #e0e4e8;
+        -fx-border-radius: 5px;
+        -fx-border-width: 1px;
+        -fx-padding: 8px 10px;
+        -fx-font-size: 14px;
+    }
+
+    .login-form .text-field:focused,
+    .login-form .password-field:focused {
+        -fx-border-color: #3498db;
+        -fx-background-color: white;
+    }
+
+    .login-button {
+        -fx-background-color: #3498db;
+        -fx-text-fill: white;
+        -fx-background-radius: 5px;
+        -fx-padding: 10px 20px;
+        -fx-font-weight: bold;
+        -fx-font-size: 14px;
+        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0.2, 0, 1);
+    }
+
+    .login-button:hover {
+        -fx-background-color: #2980b9;
+    }
+    .add-entry-form {
+        -fx-background-color: linear-gradient(to bottom right, #2c3e50, #3498db);
+        -fx-background-radius: 10px;
+        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.2, 0, 2);
+        -fx-padding: 20px;
+    }
+
+    .add-entry-form .label {
+        -fx-text-fill: #f8f9fa;
+        -fx-font-weight: bold;
+    }
+
+    .add-entry-form .text-field {
+        -fx-background-color: #f8f9fa;
+        -fx-background-radius: 5px;
+        -fx-border-color: #e0e4e8;
+        -fx-border-radius: 5px;
+        -fx-border-width: 1px;
+        -fx-padding: 8px 10px;
+        -fx-font-size: 14px;
+    }
+
+    .add-entry-form .text-field:focused {
+        -fx-border-color: #3498db;
+        -fx-background-color: white;
+    }
+
+    .add-entry-form .button {
+        -fx-background-color: #3498db;
+        -fx-text-fill: white;
+        -fx-background-radius: 5px;
+        -fx-padding: 10px 20px;
+        -fx-font-weight: bold;
+        -fx-font-size: 14px;
+        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0.2, 0, 1);
+    }
+
+    .add-entry-form .button:hover {
+        -fx-background-color: #2980b9;
+    }
+    /* Global Styles */
+    .auth-container {
+        -fx-background-color: linear-gradient(to bottom right, #2c3e50, #3498db);
+        -fx-padding: 20;
+        -fx-spacing: 15;
+    }
+
+    .brand-title {
+        -fx-font-size: 24px;
+        -fx-font-weight: bold;
+        -fx-text-fill: white;
+    }
+
+    .brand-icon {
+        -fx-fill: white;
+        -fx-scale-x: 2;
+        -fx-scale-y: 2;
+    }
+
+    /* Custom Tab Pane */
+    .custom-tab-pane .tab-header-area .tab {
+        -fx-background-color: rgba(255, 255, 255, 0.2);
+        -fx-text-fill: white;
+    }
+
+    .custom-tab-pane .tab-header-area .tab-selected {
+        -fx-background-color: white;
+        -fx-text-fill: #2c3e50;
+    }
+
+    /* Input Styles */
+    .input-container {
+        -fx-background-color: rgba(255, 255, 255, 0.1);
+        -fx-background-radius: 5px;
+        -fx-padding: 10px;
+        -fx-alignment: center-left;
+    }
+
+    .input-icon {
+        -fx-fill: white;
+        -fx-margin-right: 10px;
+    }
+
+    .custom-text-field {
+        -fx-background-color: transparent;
+        -fx-text-fill: white;
+        -fx-prompt-text-fill: rgba(255, 255, 255, 0.7);
+    }
+
+    .custom-text-field:focused {
+        -fx-background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Button Styles */
+    .primary-button {
+        -fx-background-color: white;
+        -fx-text-fill: #2c3e50;
+        -fx-font-weight: bold;
+        -fx-padding: 10px 20px;
+        -fx-background-radius: 5px;
+    }
+
+    .primary-button:hover {
+        -fx-background-color: #ecf0f1;
+    }
+
+    /* Link Label */
+    .link-label {
+        -fx-text-fill: rgba(255, 255, 255, 0.7);
+        -fx-underline: true;
+        -fx-cursor: hand;
+    }
+
+    .link-label:hover {
+        -fx-text-fill: white;
+    }
+
+    /* Error Message */
+    .error-message {
+        -fx-text-fill: #e74c3c;
+        -fx-font-size: 14px;
+    }

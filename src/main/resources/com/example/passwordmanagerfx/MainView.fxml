@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="830.0" spacing="15.0" stylesheets="@../../../styles.css" styleClass="auth-container" xmlns="http://javafx.com/javafx/22.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.passwordmanagerfx.AppController">
+
+
+    <padding>
+        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0" />
+    </padding>
+
+    <HBox alignment="CENTER" spacing="15.0" styleClass="header-container">
+        <Label fx:id="welcomeText" text="Password Vault" styleClass="welcome-text" />
+    </HBox>
+
+    <ToolBar styleClass="custom-toolbar">
+        <items>
+            <Button text="New Vault" styleClass="toolbar-btn" graphicTextGap="10">
+
+            </Button>
+            <Button text="Open Vault" styleClass="toolbar-btn" graphicTextGap="10">
+
+            </Button>
+            <Button text="Save" styleClass="toolbar-btn" graphicTextGap="10">
+
+            </Button>
+            <Button text="Save As" styleClass="toolbar-btn" graphicTextGap="10">
+
+            </Button>
+            <Button text="Log Out" onAction="#handleLogout" styleClass="toolbar-btn" graphicTextGap="10">
+
+            </Button>
+        </items>
+    </ToolBar>
+
+    <TableView fx:id="entryTable" prefHeight="350.0" prefWidth="720.0" styleClass="custom-table">
+        <columns >
+            <TableColumn fx:id="titleColumn" text="Title" prefWidth="100.0" styleClass="table-column" />
+            <TableColumn fx:id="nameColumn" text="Email" prefWidth="168.0" styleClass="table-column" />
+            <TableColumn fx:id="passwordColumn" text="Password" prefWidth="120.0" styleClass="table-column" />
+            <TableColumn fx:id="createdColumn" text="Created" prefWidth="200.0" styleClass="table-column" />
+            <TableColumn fx:id="modifiedColumn" text="Modified" prefWidth="200.0" styleClass="table-column" />
+        </columns>
+        <contextMenu>
+            <ContextMenu styleClass="custom-context-menu">
+                <items>
+                    <MenuItem text="Add Entry" onAction="#handleOpenCreateForm" styleClass="context-menu-item" />
+                    <MenuItem text="Edit Entry" onAction="#onHandleEditButton" styleClass="context-menu-item" />
+                    <MenuItem text="Delete Entry" onAction="#onHandleDeleteButton" styleClass="context-menu-item" />
+                    <MenuItem text="Copy Entry" styleClass="context-menu-item" />
+                </items>
+            </ContextMenu>
+        </contextMenu>
+    </TableView>
+
+    <Button text="Add New Password" onAction="#handleOpenCreateForm" styleClass="add-btn" />
+</VBox>
